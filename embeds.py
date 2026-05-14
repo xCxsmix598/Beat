@@ -55,8 +55,8 @@ class QueueModal(discord.ui.Modal, title="Add to Queue"):
 
         if isinstance(tracks, wavelink.Playlist):
 
-            for i, songs in enumerate(tracks.tracks):
-                songs.extras = {"requester": interaction.user.mention}
+            for i in tracks.tracks:
+                i.extras = {"requester": interaction.user.mention}
 
             await interaction.response.send_message(f"Added a Playlist **{tracks.name}** with **{len(tracks.tracks)} songs**")
 
