@@ -29,19 +29,19 @@ plugins:
         playlistLoading: true # Disables loading of playlists and mixes.
         searching: true # Disables the ability to search for videos.
 
-    oauth:
+    # oauth:
       # setting "enabled: true" is the bare minimum to get OAuth working.
-      enabled: true
+      # enabled: true
 
       # if you have a refresh token, you may set it below (make sure to uncomment the line to apply it).
       # setting a valid refresh token will skip the OAuth flow entirely. See above note on how to retrieve
       # your refreshToken.
-      refreshToken: "1//0gApKFKp112icCgYIARAAGBASNwF-L9Irt05ShSMEU18QrarxzK1LZ-HfrimKxUZ7Jhk1iDzJO9C1hS-28HS9Atx1KJYP_5SogQM"
+      # refreshToken: "your refresh token here"
 
       # Set this if you don't want the OAuth flow to be triggered, if you intend to supply a refresh token later.
       # Initialization is skipped automatically if a valid refresh token is supplied. Leave this commented if you're
       # completing the OAuth flow for the first time/do not have a refresh token.
-      skipInitialization: true
+      # skipInitialization: true
 #  name: # Name of the plugin
 #    some_key: some_value # Some key-value pair for the plugin
 #    another_key: another_value
