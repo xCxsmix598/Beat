@@ -1,6 +1,5 @@
 import discord
 import wavelink
-import prevQueue
 
 
 def embedBuilder(title, author, duration, link, requester, thumbnail, guild_name, guild_icon, source):
