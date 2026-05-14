@@ -51,11 +51,29 @@ class QueueModal(discord.ui.Modal, title="Add to Queue"):
             await interaction.response.send_message('No tracks Found')
             return
 
-        track: wavelink.Playable = tracks[0]
-        track.extras = {"requester": interaction.user.mention}
-
         vc.text_channel = interaction.channel
 
+        if isinstance(tracks, wavelink.Playlist):
+
+            for i, songs in enumerate(tracks.tracks):
+                songs.extras = {"requester": interaction.user.mention}
+
+            await interaction.response.send_message(f"Added a Playlist **{tracks.name}**")
+
+            if vc.playing:
+                for i in tracks.tracks:
+                    await vc.queue.put_wait(i)
+                    return
+
+            await vc.play(tracks.tracks[0])
+            tracks.tracks.pop(0)
+            for i in tracks.tracks:
+                await vc.queue.put_wait(i)
+
+            return
+
+        track: wavelink.Playable = tracks[0]
+        track.extras = {"requester": interaction.user.mention}
         await interaction.response.send_message(f"Added **{track.title} - {track.author}**")
 
         if vc.playing:
