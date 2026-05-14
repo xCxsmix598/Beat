@@ -58,7 +58,7 @@ class QueueModal(discord.ui.Modal, title="Add to Queue"):
             for i, songs in enumerate(tracks.tracks):
                 songs.extras = {"requester": interaction.user.mention}
 
-            await interaction.response.send_message(f"Added a Playlist **{tracks.name}**")
+            await interaction.response.send_message(f"Added a Playlist **{tracks.name}** with **{len(tracks.tracks)} songs**")
 
             if vc.playing:
                 for i in tracks.tracks:
