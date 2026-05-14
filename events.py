@@ -29,7 +29,7 @@ async def on_wavelink_track_end(payload: wavelink.TrackEndEventPayload):
 
     player: wavelink.Player = payload.player
     if hasattr(player, "text_channel"):
-        channel = getattr(player, "text_channel")
+        channel: discord.channel.TextChannel = getattr(player, "text_channel")
     if hasattr(player, "message"):
         message: discord.Message = getattr(player, "message")
         embed: discord.Embed = message.embeds[0]
