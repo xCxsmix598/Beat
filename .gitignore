@@ -2,3 +2,5 @@ __pycache__/
 .venv/
 clear_commands.py
 config.py
+Lavalink/plugins/
+Lavalink/logs/
