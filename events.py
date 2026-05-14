@@ -3,8 +3,14 @@ import wavelink
 import bot
 from embeds import embedBuilder, View
 from datetime import timedelta
+from discord.utils import escape_markdown
 
 bot = bot.bot
+
+
+@bot.event
+async def on_wavelink_node_ready(payload: wavelink.NodeReadyEventPayload):
+    print("Node Ready!")
 
 
 @bot.event
@@ -15,7 +21,7 @@ async def on_wavelink_track_start(payload: wavelink.TrackStartEventPayload):
     if hasattr(player, "text_channel"):
         channel = getattr(player, "text_channel")
     track = payload.track
-    player.message = await channel.send(view=View(), embed=embedBuilder(track.title, track.author, timedelta(milliseconds=track.length), track.uri, track.extras.requester, track.artwork, player.guild.name, player.guild.icon, track.source.capitalize()))
+    player.message = await channel.send(view=View(), embed=embedBuilder(escape_markdown(track.title), escape_markdown(track.author), timedelta(milliseconds=track.length), track.uri, escape_markdown(track.extras.requester), track.artwork, player.guild.name, player.guild.icon, track.source.capitalize()))
 
 
 @bot.event
@@ -52,5 +58,5 @@ async def on_wavelink_track_end(payload: wavelink.TrackEndEventPayload):
         embed.color = discord.Color.red()
         try:
             await message.edit(view=None, embed=embed)
-        except:
+        except (discord.HTTPException, discord.NotFound):
             player.message = await channel.send(view=View(), embed=embedBuilder(track.title, track.author, timedelta(milliseconds=track.length), track.uri, track.extras.requester, track.artwork, player.guild.name, player.guild.icon, track.source.capitalize()))

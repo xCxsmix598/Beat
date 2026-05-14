@@ -1,0 +1,62 @@
+2026-05-14T19:38:13.846+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.2.2 using Java 25.0.3 with PID 35101 (/home/jstxn/gits/Beat/Lavalink/Lavalink.jar started by jstxn in /home/jstxn/gits/Beat/Lavalink)
+2026-05-14T19:38:13.861+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2026-05-14T19:38:14.811+08:00  INFO 35101 --- [Lavalink] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d6bf653-92ea-3fde-943a-10b9f8cd696e
+2026-05-14T19:38:15.278+08:00  INFO 35101 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/1.18.1/youtube-plugin-1.18.1.jar
+2026-05-14T19:38:24.423+08:00  INFO 35101 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Loaded 'youtube-plugin-1.18.1.jar' (17 classes)
+2026-05-14T19:38:24.789+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 11.688 seconds (process running for 12.408)
+2026-05-14T19:38:24.888+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4.2.2
+	Build time:     06.03.2026 23:24:16 UTC
+	Branch          HEAD
+	Commit:         e8503fd
+	Commit time:    06.03.2026 23:21:15 UTC
+	JVM:            25.0.3
+	Lavaplayer      2.2.6
+
+2026-05-14T19:38:24.905+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2026-05-14T19:38:25.687+08:00  WARN 35101 --- [Lavalink] [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2026-05-14T19:38:25.716+08:00  INFO 35101 --- [Lavalink] [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2026-05-14T19:38:25.716+08:00  INFO 35101 --- [Lavalink] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 806 ms
+2026-05-14T19:38:27.017+08:00  INFO 35101 --- [Lavalink] [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2026-05-14T19:38:27.350+08:00  INFO 35101 --- [Lavalink] [main] d.l.youtube.plugin.YoutubePluginLoader   : YouTube source initialised with clients: WEB_REMIX, ANDROID_VR, WEB, WEB_EMBEDDED_PLAYER, TVHTML5, TVHTML5_SIMPLY 
+2026-05-14T19:38:27.359+08:00  WARN 35101 --- [Lavalink] [main] l.server.config.SentryConfiguration      : Turning off sentry
+2026-05-14T19:38:27.598+08:00  INFO 35101 --- [Lavalink] [main] l.server.config.KoeConfiguration         : OS: LINUX, Arch: X86_64
+2026-05-14T19:38:27.599+08:00  INFO 35101 --- [Lavalink] [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2026-05-14T19:38:27.602+08:00  INFO 35101 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2026-05-14T19:38:27.607+08:00  INFO 35101 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2026-05-14T19:38:27.900+08:00  INFO 35101 --- [Lavalink] [main] io.undertow                              : starting server: Undertow - 2.3.13.Final
+2026-05-14T19:38:27.925+08:00  INFO 35101 --- [Lavalink] [main] org.xnio                                 : XNIO version 3.8.8.Final
+2026-05-14T19:38:27.948+08:00  INFO 35101 --- [Lavalink] [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2026-05-14T19:38:28.094+08:00  INFO 35101 --- [Lavalink] [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2026-05-14T19:38:28.138+08:00  INFO 35101 --- [Lavalink] [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port 2333 (http) with context path '/'
+2026-05-14T19:38:28.146+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 3.346 seconds (process running for 15.765)
+2026-05-14T19:38:28.146+08:00  INFO 35101 --- [Lavalink] [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2026-05-14T19:38:31.597+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-14T19:38:31.597+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-14T19:38:31.599+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-14T19:38:31.634+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:50614
+2026-05-14T19:38:31.650+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2026-05-14T19:38:31.685+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] c.s.l.c.natives.NativeLibraryLoader      : Native library dave-jvm: loading with filter null
+2026-05-14T19:38:31.705+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] c.s.l.c.natives.NativeLibraryLoader      : Native library dave-jvm: successfully loaded.
+2026-05-14T19:38:31.725+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Wavelink/3.5.2
+2026-05-14T19:38:31.830+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/b25bnv1ayzf3588j, client=127.0.0.1, payload={"resuming": true, "timeout": 60}
+2026-05-14T19:38:31.847+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/info, client=127.0.0.1
+2026-05-14T19:39:27.892+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/b25bnv1ayzf3588j/players/1110853101176487977?noReplace=True, client=0:0:0:0:0:0:0:1, payload={"voice": {"sessionId": "cbeff10eb92b86fd9d4e02f2ac5d321b", "token": "96b7d7ace065c39c", "endpoint": "c-sin07-54951826.discord.media:2083", "channelId": "1347167882911678545"}}
+2026-05-14T19:39:27.913+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytmsearch:when you find me pienka"
+2026-05-14T19:39:28.591+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Loaded playlist Search music results for: when you find me pienka
+2026-05-14T19:39:28.613+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytmsearch:when%20you%20find%20me%20pienka, client=0:0:0:0:0:0:0:1
+2026-05-14T19:39:29.294+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/b25bnv1ayzf3588j/players/1110853101176487977?noReplace=False, client=0:0:0:0:0:0:0:1, payload={"track": {"encoded": "QAABAAMAHldoZW4gWW91IEZpbmQgTWUgKEJvbnVzIFRyYWNrKQAGcGxlbmthAAAAAAADtTgACy15ZWU3WDd6aHJ3AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9LXllZTdYN3pocncBAH5odHRwczovL3l0My5nb29nbGV1c2VyY29udGVudC5jb20vSkhiUkVIajc3XzBvUlNnaHFRZDFoQW1MQV8xTDI3dzhSUTMwVkEwS09Gal90c0JvQnYzY2Vzdk9aSlBZMF9SbVIxMmdUUm5kYldRQjVHNVY9dzEwMDAtaDEwMDAAAAd5b3V0dWJlAAAAAAAAAAA=", "userData": {"requester": "<@850237804441239622>"}}, "volume": 100, "position": 0, "endTime": null, "paused": false, "filters": {"equalizer": [{"band": 0, "gain": 0.0}, {"band": 1, "gain": 0.0}, {"band": 2, "gain": 0.0}, {"band": 3, "gain": 0.0}, {"band": 4, "gain": 0.0}, {"band": 5, "gain": 0.0}, {"band": 6, "gain": 0.0}, {"band": 7, "gain": 0.0}, {"band": 8, "gain": 0.0}, {"band": 9, "gain": 0.0}, {"band": 10, "gain": 0.0}, {"band": 11, "gain": 0.0}, {"band": 12, "gain": 0.0}, {"band": 13, "gain": 0.0}, {"band": 14, "gain": 0.0}]}}
+2026-05-14T19:39:29.442+08:00  INFO 35101 --- [Lavalink] [lava-daemon-pool-playback-1-thread-1] d.l.y.http.YoutubeAccessTokenTracker     : Updating YouTube visitor id succeeded, new one is CgszQ1diRUhzbXFUdyiP6ZbQBjIKCgJQSBIEGgAgXDoMCAEgycjOmPCR7YJqYt8CCtwCMTguWVQ9Mm1Ib3BTTGdzS3dQeTFCWDRQNVM3bU8zMzk4MmlqZFBQamowSVBhaWhjTmZhTlA4anMzRGFpUEFxQ3pmVXRZR25vV2xqdXRKa3BtbktlaEJ0UUNkRUlRWmFqR1o4b2FRdEZER2thZk1HMW1aT2xFdUVSSXBPdzhfSTlfRDZzZXdvMUJBbTBkaHczRlNkVUYtQmRnVUg0RmpGUThNWXk1M1E4SnJUTUs0UVlQcWs5UEFLS0E0bnI0eFZNNGJYUGd6UkdnZEQ3bEIyYWUtR1hjTjg0alZkQndpcjJrRloydUgxaThKTlVoemdxbmJPRmtoSl9XN3h0ajYzWVFESU10b2c3ZTNLcjZ0UGRDcWpwd2JpQ0JnXzB2ZnFGX293c041NDlWRzFvNXMwd2lONklVdld1YlVlamRZMnp2LTNjZU93WGYtdTVxb21rdHpkd203TXlxSFJn, next update will be after 600 seconds.
+2026-05-14T19:43:32.770+08:00  INFO 35101 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/b25bnv1ayzf3588j/players/1110853101176487977, client=0:0:0:0:0:0:0:1
+2026-05-14T19:43:45.880+08:00  INFO 35101 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.13.Final
+2026-05-14T19:43:45.885+08:00  INFO 35101 --- [Lavalink] [lavalink-shutdown-handler] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:50614 with status CloseStatus[code=1001, reason=] -- Session can be resumed within the next 60 seconds with id b25bnv1ayzf3588j
+2026-05-14T19:43:45.888+08:00  INFO 35101 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2026-05-14T19:43:45.893+08:00  INFO 35101 --- [Lavalink] [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

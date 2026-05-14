@@ -1,5 +1,6 @@
 import discord
 import wavelink
+from discord.utils import escape_markdown
 
 
 def embedBuilder(title, author, duration, link, requester, thumbnail, guild_name, guild_icon, source):
@@ -58,7 +59,7 @@ class QueueModal(discord.ui.Modal, title="Add to Queue"):
             for i in tracks.tracks:
                 i.extras = {"requester": interaction.user.mention}
 
-            await interaction.response.send_message(f"Added a Playlist **{tracks.name}** with **{len(tracks.tracks)} songs**")
+            await interaction.response.send_message(f"Added a Playlist **{escape_markdown(tracks.name)}** with **{len(tracks.tracks)} songs**")
 
             if vc.playing:
                 for i in tracks.tracks:
@@ -74,7 +75,7 @@ class QueueModal(discord.ui.Modal, title="Add to Queue"):
 
         track: wavelink.Playable = tracks[0]
         track.extras = {"requester": interaction.user.mention}
-        await interaction.response.send_message(f"Added **{track.title} - {track.author}**")
+        await interaction.response.send_message(f"Added **{escape_markdown(track.title)} - {escape_markdown(track.author)}**")
 
         if vc.playing:
             await vc.queue.put_wait(track)
