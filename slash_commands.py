@@ -57,13 +57,9 @@ async def queue(interaction: discord.Interaction):
         await interaction.response.send_message("Current Queue is Empty", ephemeral=True)
         return
 
-    queueList = []
+    queueEmbeds = embeds.QueueEmbed(player=player)
 
-    for i, value in enumerate(player.queue, 1):
-        queueList.append(
-            f"{i}. **[{value.title} - {value.author}](<{value.uri}>)** (Added by {value.extras.requester})\n")
-
-    await interaction.response.send_message("".join(queueList), ephemeral=True)
+    await interaction.response.send_message(embed=queueEmbeds[0], view=embeds.QueueView(embeds=queueEmbeds), ephemeral=True)
 
 
 @bot.tree.command(name="remove", description="Removes a song from the current queue")

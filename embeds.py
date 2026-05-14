@@ -1,6 +1,7 @@
 import discord
 import wavelink
 from discord.utils import escape_markdown
+import math
 
 
 def embedBuilder(title, author, duration, link, requester, thumbnail, guild_name, guild_icon, source):
@@ -16,6 +17,79 @@ def embedBuilder(title, author, duration, link, requester, thumbnail, guild_name
     embed.add_field(name="Requester", value=requester, inline=True)
 
     return embed
+
+
+def QueueEmbed(player: wavelink.Player):
+
+    tracks_per_page = 10
+
+    queue_list = list(player.queue)
+
+    pages = math.ceil(len(queue_list) / tracks_per_page)
+
+    embeds = []
+
+    for page in range(pages):
+        start = page * tracks_per_page
+        end = start + tracks_per_page
+
+        current_tracks = queue_list[start:end]
+
+        description = "\n".join(
+            f"{start + i + 1}. **[{escape_markdown(track.title)} - {
+                escape_markdown(track.author)}](<{track.uri}>)**"
+            for i, track in enumerate(current_tracks)
+        )
+
+        embed = discord.Embed(
+            title="Queue",
+            description=description,
+            color=discord.Color.blurple()
+        )
+
+        embed.set_footer(text=f"Page {page + 1}/{pages}")
+
+        embeds.append(embed)
+
+    return embeds
+
+
+class QueueView(discord.ui.View):
+    def __init__(self, embeds):
+        super().__init__(timeout=None)
+
+        self.embeds = embeds
+        self.page = 0
+
+    def update_buttons(self):
+        self.previous.disabled = self.page == 0
+        self.next.disabled = self.page == len(self.embeds) - 1
+
+    @discord.ui.button(label="◀️", style=discord.ButtonStyle.secondary)
+    async def previous(self, interaction: discord.Interaction, button: discord.ui.Button):
+
+        if self.page > 0:
+            self.page -= 1
+
+        self.update_buttons()
+
+        await interaction.response.edit_message(
+            embed=self.embeds[self.page],
+            view=self
+        )
+
+    @discord.ui.button(label="▶️", style=discord.ButtonStyle.secondary)
+    async def next(self, interaction: discord.Interaction, button: discord.ui.Button):
+
+        if self.page < len(self.embeds) - 1:
+            self.page += 1
+
+        self.update_buttons()
+
+        await interaction.response.edit_message(
+            embed=self.embeds[self.page],
+            view=self
+        )
 
 
 class SourceSelect(discord.ui.Select):
