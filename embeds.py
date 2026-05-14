@@ -1,5 +1,6 @@
 import discord
 import wavelink
+import prevQueue
 
 
 def embedBuilder(title, author, duration, link, requester, thumbnail, guild_name, guild_icon, source):
@@ -106,13 +107,27 @@ class View(discord.ui.View):
         await interaction.edit_original_response(view=None, embed=embed)
         await player.disconnect()
 
+    @discord.ui.button(emoji="⏮️")
+    async def previous(self, interaction: discord.Interaction, button: discord.Button):
+
+        player: wavelink.Player = interaction.guild.voice_client
+
+        if player.queue.history.count <= 1:
+            await interaction.response.send_message("Already at the first song in the Queue", ephemeral=True)
+            return
+
+        player.queue.put_at(0, player.current)
+
+        player.queue.history.delete(player.queue.history.count - 1)
+        await player.play(player.queue.history.get_at(player.queue.history.count - 1))
+
     @discord.ui.button(emoji="⏭️")
     async def next(self, interaction: discord.Interaction, button: discord.ui.Button):
 
         player: wavelink.Player = interaction.guild.voice_client
-        if not player.queue.is_empty:
+        try:
             await player.play(player.queue.get())
-        else:
+        except wavelink.exceptions.QueueEmpty:
             await interaction.response.send_message('Already at the last song in the Queue', ephemeral=True)
 
     @discord.ui.button(emoji="➕")
